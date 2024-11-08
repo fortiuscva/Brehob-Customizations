@@ -1,4 +1,4 @@
-pageextension 50100 "BHB Resource Card" extends "Resource Card"
+pageextension 52300 "BHB Resource Card" extends "Resource Card"
 {
     layout
     {
