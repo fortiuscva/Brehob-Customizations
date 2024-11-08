@@ -1,4 +1,4 @@
-report 50100 "BHB Delete Requisition Lines"
+report 52300 "BHB Delete Requisition Lines"
 {
     ApplicationArea = All;
     Caption = 'Delete Requisition Lines';

@@ -1,4 +1,4 @@
-pageextension 50101 "BHB Employee Card" extends "Employee Card"
+pageextension 52301 "BHB Employee Card" extends "Employee Card"
 {
     layout
     {
