@@ -1,8 +1,8 @@
-tableextension 50100 "BHB Resource" extends Resource
+tableextension 52301 "BHB Employee" extends Employee
 {
     fields
     {
-        field(50100; "BHB Hide from ExpandIT"; Boolean)
+        field(52300; "BHB Hide from ExpandIT"; Boolean)
         {
             Caption = 'Hide from ExpandIT';
             DataClassification = ToBeClassified;
