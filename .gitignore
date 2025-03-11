@@ -2,6 +2,7 @@
 .alcache/*.*
 .vscode/.alcache/*.*
 .vscode/.alstudio/alstudio.scopes.json
+extensionsPermissionSet.xml
 entitlements.json
 .vscode/rad.json
 twp.json
