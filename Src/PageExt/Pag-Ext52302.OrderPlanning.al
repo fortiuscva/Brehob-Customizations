@@ -4,7 +4,7 @@ pageextension 52302 "BHB Order Planning" extends "Order Planning"
     {
         addafter("Refresh &Planning Line")
         {
-            action("BHB Delete Batch Records")
+            action("BHB Delete Lines")
             {
                 ApplicationArea = all;
                 Caption = 'Delete Batch Records';
@@ -13,20 +13,19 @@ pageextension 52302 "BHB Order Planning" extends "Order Planning"
                 var
                     ReqLineRecLcl: Record "Requisition Line";
                 begin
-                    if not Confirm('Do you want to proceed for records deletion?', false) then
+                    if not Confirm('Do you want to delete lines in the current batch?', false) then
                         Error('');
 
                     ReqLineRecLcl.Reset();
-                    ReqLineRecLcl.SetRange("Worksheet Template Name", rec."Worksheet Template Name");
-                    ReqLineRecLcl.SetRange("Journal Batch Name", rec."Journal Batch Name");
-                    if ReqLineRecLcl.FindSet() then
-                        ReqLineRecLcl.Delete(true);
+                    ReqLineRecLcl.SetRange("Worksheet Template Name", Rec."Worksheet Template Name");
+                    ReqLineRecLcl.SetRange("Journal Batch Name", Rec."Journal Batch Name");
+                    ReqLineRecLcl.DeleteAll(true);
                 end;
             }
         }
         addafter("Refresh &Planning Line_Promoted")
         {
-            actionref(DeleteBatchRecords_Promoted; "BHB Delete Batch Records")
+            actionref(DeleteBatchRecords_Promoted; "BHB Delete Lines")
             {
 
             }
